@@ -16,5 +16,9 @@ To add to grafana dashboard, use this url as the datasource for loki :
 ```
 http://loki.observability.svc.cluster.local:3100
 ```
+use this dashboard ID in grafana dashboard for predefined logs that shows the namespace and the objects. 
+```
+15324
+```
 
 # Happy Logging
