@@ -1,4 +1,4 @@
-# openshift-alloy-loki-logs
+# openshift-alloy-loki-logs-grafana
 
 To run this script, Change ocp-cluster-01 in the 04-alloy-configmap.yaml file to your real cluster name:
 To get the cluster name, run the command :
@@ -21,4 +21,21 @@ use this dashboard ID in grafana dashboard for predefined logs that shows the na
 15324
 ```
 
+
+#To ensure Grafana dashboard persists when setting up Entra details, pls update the grafana object spec with this 
+
+```
+oc edit grafana grafana-a -n default
+```
+
+```
+spec:
+  persistentVolumeClaim:
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 10Gi
+```
 # Happy Logging
