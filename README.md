@@ -22,7 +22,7 @@ use this dashboard ID in grafana dashboard for predefined logs that shows the na
 ```
 
 
-#To ensure Grafana dashboard persists when setting up Entra details, pls update the grafana object spec with this 
+# To ensure Grafana dashboard persists when setting up Entra details, pls update the grafana object spec with this 
 
 ```
 oc edit grafana grafana-a -n default
